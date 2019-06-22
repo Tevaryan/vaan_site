@@ -1,29 +1,21 @@
 import React, { Component } from 'react';
-import Navbar from './containers/Nav';
-import WorkOne from './components/workOne';
-import WorkTwo from './components/workTwo';
-import WorkThree from './components/workThree';
-import Tagline from './components/Tagline'
-import Carsel from './components/Carousel'
+import {Route} from "react-router-dom";
+import Homepage from "./containers/Homepage.js"
+import Portfoliopage from "./containers/Porfoliopage"
 import './App.css';
+
 
 class App extends Component {
 
-  button_log = () => {
-    console.log('blabla')
-  }
   render()
   {
     return (
       <>
-        <Navbar/>
-        <Tagline/>
-        <WorkOne/>
-        <WorkTwo/>
-        <WorkThree/>
-        <Carsel/>
+        <Route exact path ={'/'} component={Homepage}/>
+        <Route path ={'/Portfolio'} component={Portfoliopage}/>
       </>
     )
   }
 }
+
 export default App;

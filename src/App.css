@@ -23,6 +23,14 @@
   color: #61dafb;
 }
 
+.Nav-text {
+  color: #727178;
+}
+
+.Nav-text:hover {
+  color: black;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
