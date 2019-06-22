@@ -21,7 +21,7 @@ class App extends Component {
         <WorkOne/>
         <WorkTwo/>
         <WorkThree/>
-        <Carsel style={{height:'100vh'}}/>
+        <Carsel/>
       </>
     )
   }

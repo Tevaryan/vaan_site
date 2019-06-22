@@ -4,9 +4,6 @@ class template extends Component {
   render() {
     return (
       <div style={{width:"100vw", height:"60vh"}}>
-        <div styl={{position:'absolute'}}>
-
-        </div>
         <div className="d-flex flex-column align-items-end w-100" style={{marginTop:'250px'}}>
           <div className='w-50'>
             <h1>Company Tagline</h1>

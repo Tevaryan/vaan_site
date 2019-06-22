@@ -44,48 +44,50 @@ class Carsel extends Component {
   }
 
   next = () =>  {
-    // if (this.state.animating) return;
-    const nextIndex = this.state.activeIndex === items.length - 1 ? 0 : this.state.activeIndex + 1;
-    this.setState({ activeIndex: nextIndex });
-    console.log(this.power)
+    if (this.state.activeIndex === items.length - 1) {
+      this.setState({activeIndex: 0})
+    } else {
+      this.setState({activeIndex: this.state.activeIndex + 1})
+    }
   }
 
   previous = () =>  {
-    // if (this.state.animating) return;
-    const nextIndex = this.state.activeIndex === 0 ? items.length - 1 : this.state.activeIndex - 1;
-    this.setState({ activeIndex: nextIndex });
+    if (this.state.activeIndex === 0) {
+      this.setState({activeIndex: items.length - 1})
+    } else {
+      this.setState({activeIndex: this.state.activeIndex - 1})
+    }
   }
 
   goToIndex= (newIndex) =>  {
-    // if (this.stateanimating) return;
     this.setState({ activeIndex: newIndex });
   }
 
   render() {
-
-
     return (
-      <Carousel
-        activeIndex={this.state.activeIndex}
-        next={this.next}
-        previous={this.previous}
-      >
-        <CarouselIndicators items={items} activeIndex={this.state.activeIndex} onClickHandler={this.goToIndex} />
-        {items.map((item) => {
-            return (
-              <CarouselItem
-                onExiting={this.onExiting}
-                onExited={this.onExited}
-                key={item.src}
-              >
-                <img src={item.src} alt={item.altText} />
-                <CarouselCaption captionText={item.caption} captionHeader={item.caption} />
-              </CarouselItem>
-            );
-          })}
-        <CarouselControl direction="prev" directionText="Previous" onClickHandler={this.previous} />
-        <CarouselControl direction="next" directionText="Next" onClickHandler={this.next} />
-      </Carousel>
+        <div style={{width:'100vw'}} >
+          <Carousel
+            activeIndex={this.state.activeIndex}
+            next={this.next}
+            previous={this.previous}
+
+          >
+            <CarouselIndicators items={items} activeIndex={this.state.activeIndex} onClickHandler={this.goToIndex} />
+            {items.map((item) => {
+                return (
+                  <CarouselItem
+                    onExiting={this.onExiting}
+                    onExited={this.onExited}
+                    key={item.src}>
+                    <img style={{width:'100%', objectFit:'contain'}} src={item.src} alt={item.altText} />
+                    <CarouselCaption captionText={item.caption} captionHeader={item.caption} />
+                  </CarouselItem>
+                );
+              })}
+            <CarouselControl direction="prev" onClickHandler={this.previous} />
+            <CarouselControl direction="next" onClickHandler={this.next} />
+          </Carousel>
+        </div>
     );
   }
 }
