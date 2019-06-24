@@ -19,7 +19,6 @@ class Homepage extends Component {
         <WorkTwo/>
         <WorkOne/>
         <WorkTwo/>
-        <Carsel/>
       </>
     )
   }
