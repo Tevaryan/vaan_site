@@ -14,13 +14,19 @@ export default class Navbar extends Component {
   render() {
     return (
       <div style={{backgroundColor:'#EDEEF0', position:'sticky', top:'0'}}>
-        <div className="w-50 mx-auto">
-          <Nav className="d-flex my-auto justify-content-between" >
+        <div className="NavBarContainer">
+
+          <Nav className="NavBarLarge" >
             <NavLink tag={Link} to={'/'} className="d-flex Nav-text">Home</NavLink>
             <NavLink tag={Link} to={'/Portfolio'}className="d-flex Nav-text" >Portfolio</NavLink>
             <NavLink tag={Link} to={'/Gallery'}className="d-flex Nav-text" >Gallery</NavLink>
             <NavLink tag={Link} to={'/ContactUs'} className="d-flex Nav-text">Contact Us</NavLink>
           </Nav>
+
+          <Nav className="justify-content-end NavBarSmall">
+            <NavLink tag={Link} to={'/ContactUs'} className="d-flex Nav-text">Hidden</NavLink>
+          </Nav>
+
         </div>
         {/* <hr className="my-0" style={{border: '1px solid #8E9094'}}/> */}
       </div>

@@ -1,0 +1,131 @@
+.workContainer {
+  flex-direction: column;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.workContainerOne {
+  flex-direction: column-reverse;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.workImage {
+  width: 100%;
+  height: 100%;
+}
+
+.workDescription {
+  font-size: 45%;
+}
+
+.BackgroundImage {
+  height: 75vh;
+  width: 100vw;
+}
+
+.ValuesContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.ValueThemeContainer {
+  color: #696969;
+  border-bottom: solid;
+  border-right: none;
+}
+
+.ValueThemeDiv {
+  align-items: flex-start;
+  padding-top: 3rem;
+}
+
+.DescriptionContainer {
+  padding-right: 3rem;
+  padding-left: 3rem;
+  padding-bottom: 3rem;
+  padding-top: 1.5rem;
+}
+
+@media only screen and (min-width: 750px) {
+  .workContainer {
+    flex-direction: row;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .workContainerOne {
+    flex-direction: row;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  .workImage {
+    width: 100%;
+    height: 50%;
+  }
+
+  .workDescription {
+    font-size: 65%;
+  }
+
+  .workDescriptionContainer {
+    padding: 20px;
+  }
+}
+
+@media only screen and (min-width: 1025px) {
+  .workContainer {
+    flex-direction: row;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .workContainerOne {
+    flex-direction: row;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  .workImage {
+    width: 75%;
+    height: 75%;
+  }
+
+  .workDescription {
+    font-size: 75%;
+  }
+
+  .workDescriptionContainer {
+    padding: 20px;
+  }
+
+  .BackgroundImage {
+    height: 100vh;
+    width: 100vw;
+  }
+
+  .ValuesContainer {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .ValueThemeContainer {
+    color: #696969;
+    border-right: solid;
+    border-bottom: none;
+  }
+
+  .ValueThemeDiv {
+    align-items: flex-end;
+    padding: 0;
+  }
+
+  .DescriptionContainer {
+    padding-right: 3rem;
+    padding-left: 3rem;
+    padding-bottom: 3rem;
+    padding-top: 3rem;
+  }
+}

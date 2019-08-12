@@ -31,11 +31,54 @@
   color: black;
 }
 
+.NavBarSmall {
+  display: flex;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-right: 10%;
+}
+
+.NavBarLarge {
+  display: none !important;
+}
+
+.BackgroundImage {
+  display: none !important;
+}
+
+.TextContainer2 {
+  display: block !important;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+@media only screen and (min-width: 750px) {
+  .NavBarLarge {
+    display: flex !important;
+    margin-top: auto;
+    margin-bottom: auto;
+    justify-content: space-between;
+  }
+  .NavBarSmall {
+    display: none !important;
+  }
+  .NavBarContainer {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .BackgroundImage {
+    display: block !important;
+  }
+
+  .TextContainer2 {
+    display: none !important;
   }
 }
