@@ -18,7 +18,6 @@ export default class Navbar extends Component {
 
           <Nav className="NavBarLarge" >
             <NavLink tag={Link} to={'/'} className="d-flex Nav-text">Home</NavLink>
-            <NavLink tag={Link} to={'/Portfolio'}className="d-flex Nav-text" >Portfolio</NavLink>
             <NavLink tag={Link} to={'/Gallery'}className="d-flex Nav-text" >Gallery</NavLink>
             <NavLink tag={Link} to={'/ContactUs'} className="d-flex Nav-text">Contact Us</NavLink>
           </Nav>
