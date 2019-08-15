@@ -6,7 +6,7 @@ import Fade from 'react-reveal/Fade';
 class WorkThree extends Component {
   render() {
     return (
-      <Fade left delay="1250" duration="1000">
+      <Fade left duration="1000">
         <Fade>
           <div style={{width:"100vw", height:"50vh"}} >
             <div className="d-flex w-75 mx-auto h-100 workContainer">
