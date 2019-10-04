@@ -8,6 +8,7 @@ import WorkFour from '../components/workFour';
 import WorkFive from '../components/workFive';
 import Values from '../components/values'
 import Tagline from '../components/Tagline'
+import '../App.css';
 
 
 
@@ -19,7 +20,7 @@ class Homepage extends Component {
   {
     return (
       <>
-        <Navbar/>
+        <Navbar className="Navbar"/>
         <div style={{ backgroundImage:`url(${wallTexture})`, backgroundRepeat: 'repeat-y repeat-x'}}>
           <Tagline/>
           <Values/>
